@@ -58,9 +58,12 @@ def chooseyourburgur():
     print(f"your order is {choosensauce} , {choosenmeat} , {choosendrinks}")
     total_price = (total_price + meat.get(choosenmeat) + sauce.get(choosensauce))*size
     return total_price
+    
 
 
-
-
+def membership(price):
+	#checkmenbership
+	#return discounted_price
 price = chooseyourburgur()
-print(price)
+discount = membership(price)
+sumprice = price*discount*1.07 #VAT 7%
