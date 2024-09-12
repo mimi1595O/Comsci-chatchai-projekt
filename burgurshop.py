@@ -13,7 +13,7 @@ def chooseyourburgur():
     total_price = 0
     saucenum = 0
     print("choose your burger size(1,2,3,4)") 
-    inputsize = input(":")
+    inputsize = int(input(":"))
     #print(size)
     size = borgarsize[inputsize-1]
     print("choose your sauce")
@@ -61,9 +61,45 @@ def chooseyourburgur():
     
 
 
-def membership(price):
-	#checkmenbership
+def register():
+    if(input("Do you want to register? (y/n) : ") == "y"):
+        checklist.append(input("enter your phone number : "))
+        return True
+        
+    else:
+        return False
+
+
+
+def membership():
+	#checkmenbership(condition)
 	#return discounted_price
+    if(input("Are you a member?(y/n)") == "y"):
+        if(input("please enter phone number verification") in checklist):
+            discounted_price = 0.95
+        else:
+            print("you are not a member")
+            registered = register()
+            if registered:
+                discounted_price = 0.95
+            else:
+                discounted_price = 1
+    else:
+        registered = register()
+        if registered:
+            discounted_price = 0.95
+        else:
+            discounted_price = 1
+    return discounted_price
+
+
+
+    
+
+
 price = chooseyourburgur()
-discount = membership(price)
+print(price)
+discount = membership()
+print(discount)
 sumprice = price*discount*1.07 #VAT 7%
+print(sumprice)
