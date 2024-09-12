@@ -1,0 +1,6 @@
+0.introdution and summary
+1.how to use
+2.how it works (code)
+  2.1 def choose your burger
+  2.2 def membership
+  2.3 price calculation
