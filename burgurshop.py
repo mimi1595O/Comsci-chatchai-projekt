@@ -1,8 +1,5 @@
 checklist = ["0828042646","0865212221","0838290808","191","070910712446","0968497243"]
-borgarsize01 = 1
-borgarsize02 = 1.5
-boragrsize03 = 2
-borgarsize04 = 4
+borgarsize = [1,1.5,2,3]
 meat = {"pork":30, "chicken":25 , "beef":50, "synth": 500}
 sauce = {"tomato":5 ,"mayo":5,"mustard":10}
 
@@ -16,17 +13,20 @@ def chooseyourburgur():
     total_price = 0
     saucenum = 0
     print("choose your burger size(1,2,3,4)") 
-    size = input(":")
-    print(size)
+    inputsize = input(":")
+    #print(size)
+    size = borgarsize[inputsize-1]
     print("choose your sauce")
+
+	
     for i in sauce:
     	saucenum = saucenum +1
     	print(f"\n{i} price = {sauce[i]} press {saucenum}")
     saucetype = int(input(":")) - 1
     choosensauce = list(sauce.keys())[saucetype]
     print(f"you choosed {choosensauce}")
-
-
+    
+    
     meatnum = 0
     for i in meat:
     	meatnum = meatnum +1
@@ -56,7 +56,7 @@ def chooseyourburgur():
 
 
     print(f"your order is {choosensauce} , {choosenmeat} , {choosendrinks}")
-    total_price = total_price + meat.get(choosenmeat) + sauce.get(choosensauce)
+    total_price = (total_price + meat.get(choosenmeat) + sauce.get(choosensauce))*size
     return total_price
 
 
