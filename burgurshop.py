@@ -32,8 +32,9 @@ def chooseyourburgur():
                 
         
         #Choose sauce
-        saucenum = 0 
+        
         while True:
+	    saucenum = 0 
             try:       
                 print("choose your sauce")
                 for i in sauce:
