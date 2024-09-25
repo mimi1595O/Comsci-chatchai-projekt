@@ -4,7 +4,8 @@ Chatchai prokjekt
 todo :
 1. Decoration
 2. comment
-3. GUI (tk or Qt)
+3. Json db
+4. GUI (tk or Qt)
 
 
 
