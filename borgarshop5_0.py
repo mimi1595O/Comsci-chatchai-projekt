@@ -13,6 +13,7 @@ sizelist = {"Small":1, "Medium":1.5 , "Large":2}
 
 #choose size
 print("Please choose burgur size")
+
 for key,value in sizelist.items():
     print(f"\n{key}")
 finished = False
@@ -22,10 +23,11 @@ while not finished:
         try:
             num = int(input(f"Enter number (1 - {len(sizelist)})"))
             size = list(sizelist.values())[num-1]
-            time.sleep(0.3)
-            finished = True
         except(ValueError,IndexError):
             print("Invalid input")
+        else:
+            time.sleep(0.3)
+            finished = True
 
 
 
@@ -47,9 +49,12 @@ appendinglist = []
 
 def addingredient(dict,appendinglist):
     finished = False
+    print("Please choose")
+    for key,value in dict.items():
+        print(f"{key} price = {value} THB")
     while not finished:
         try:
-            print(chooseingredient(dict))
+            
             num = int(input(f"Enter number (1 - {len(dict)})"))
             choosen = list(dict.keys())[num-1]
             appendinglist.append(dict.get(choosen))
@@ -61,12 +66,11 @@ def addingredient(dict,appendinglist):
         #print(appendinglist)
 
 
-def chooseingredient(yourdict):
+""" def chooseingredient(yourdict):
     print("Please choose")
     for key,value in yourdict.items():
-        print(f"\n{key} price = {value} THB")
-        #appendinglist.append(int(input("enter")))
-        #print(appendinglist)
+        print(f"{key} price = {value} THB") """
+       
     
 
 def register():
@@ -77,6 +81,8 @@ def register():
         
     else:
         return False
+
+
 
 def membership():
 	#checkmenbership(condition)
@@ -111,6 +117,7 @@ addingredient(sauce,appendinglist)
 addingredient(drinks,appendinglist)
 addingredient(addition,appendinglist)
 discount = membership()
+
 #MAIN
 
 
