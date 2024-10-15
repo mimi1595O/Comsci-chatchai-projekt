@@ -5,7 +5,7 @@ todo :
 1. Decoration (ALMOST DONE)
 2. comment (DONE)
 3. Json db (I'm not doing that)
-4. GUI (tk or Qt) (I hate GUI)
+4. GUI (tk or Qt) (Done with help of chatgpt)
 
 prerequisite(pip install)
 1.pyfiglet
