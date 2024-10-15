@@ -2,7 +2,7 @@
 Chatchai prokjekt
 
 todo :
-1. Decoration (ALMOST DONE)
+1. Decoration (DONE)
 2. comment (DONE)
 3. Json db (I'm not doing that)
 4. GUI (tk or Qt) (Done with help of chatgpt)
