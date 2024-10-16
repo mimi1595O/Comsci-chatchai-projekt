@@ -139,8 +139,8 @@ class BurgerApp:
         global discount
         phone_number = self.phone_var.get()
 
-        if not phone_number.isdigit() or phone_number.__len__() >= 10:
-            messagebox.showerror("Invalid Input", "You can only enter 0-9 numbers for the phone number.")
+        if not phone_number.isdigit() or phone_number.__len__() >= 11:
+            messagebox.showerror("Invalid Input", "You can only enter numbers for the phone number or invalid phone number format.")
             return  
 
         if phone_number in checklist:
